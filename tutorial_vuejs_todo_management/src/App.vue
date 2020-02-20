@@ -2,7 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>Todo Management.</h1>
-    <hr />
+    <hr/>
     <router-view></router-view>
     <hello></hello>
 
@@ -13,8 +13,9 @@
 <script>
   import HelloWorld from "./components/HelloWorld";
   import Hello from "./components/Hello";
+
   export default {
-    name :'app',
+    name: 'app',
     components: {Hello}
   }
 </script>

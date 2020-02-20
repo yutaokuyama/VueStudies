@@ -9,10 +9,12 @@
     "start": "npm run dev",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "format": "prettier --write 'src/**/*.js'"
   },
   "dependencies": {
     "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
