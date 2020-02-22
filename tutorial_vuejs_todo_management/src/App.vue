@@ -11,7 +11,6 @@
 </template>
 
 <script>
-  import HelloWorld from "./components/HelloWorld";
   import Hello from "./components/Hello";
 
   export default {
