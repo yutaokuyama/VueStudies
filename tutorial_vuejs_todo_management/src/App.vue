@@ -4,18 +4,18 @@
     <h1>Todo Management.</h1>
     <hr/>
     <router-view></router-view>
-    <hello></hello>
+    <todo-list></todo-list>
 
 
   </div>
 </template>
 
 <script>
-  import Hello from "./components/Hello";
+  import TodoList from "./components/TodoList";
 
   export default {
     name: 'app',
-    components: {Hello}
+    components: {TodoList}
   }
 </script>
 
