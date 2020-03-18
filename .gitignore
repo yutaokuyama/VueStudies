@@ -1,0 +1,13 @@
+### https://raw.github.com/github/gitignore/65047ae444f1a784cde8d6f52c32e781a484a505/community/JavaScript/Vue.gitignore
+
+# gitignore template for Vue.js projects
+#
+# Recommended template: Node.gitignore
+
+# TODO: where does this rule come from?
+docs/_book
+
+# TODO: where does this rule come from?
+test/
+
+
