@@ -73,9 +73,7 @@ export default {
   },
   head: {
     meta: [
-      { name: "description", content: "descriptionの内容が入ります。" },
       { name: "viewport", content: "width=device-width,initial-scale=1.0" },
-      { property: "og:type", content: "website" }
       // ...
     ]
   }
@@ -83,12 +81,9 @@ export default {
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
+canvas {
   margin: 0;
   overflow: hidden;
+  z-index: -1;
 }
 </style>
