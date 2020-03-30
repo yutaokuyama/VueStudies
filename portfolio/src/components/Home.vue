@@ -1,5 +1,12 @@
 <template>
-  <canvas id="canvas" :width="canvasWidth" :height="canvasHeight"></canvas>
+  <div id="home">
+    <canvas id="canvas" :width="canvasWidth" :height="canvasHeight"></canvas>
+    <div id="wrap">
+      <h1>ホーム</h1>
+      <router-link  id="home-nav" to="/works" exact><a>works</a></router-link>
+      <router-link  id="home-nav" to="/about" exact><a>about</a></router-link>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -35,7 +42,6 @@ export default {
     };
   },
   mounted() {
-
     window.addEventListener("resize", this.handleResize);
     const _canvas = document.getElementById("canvas");
     this.renderer = new THREE.WebGLRenderer({
@@ -52,9 +58,8 @@ export default {
       // resizeのたびにこいつが発火するので、ここでやりたいことをやる
       this.canvasWidth = window.innerWidth;
       this.canvasHeight = window.innerHeight;
-     // this.renderer.setPixelRatio(window.devicePixelRatio);
-            this.renderer.setSize(this.canvasWidth, this.canvasHeight);
-
+      // this.renderer.setPixelRatio(window.devicePixelRatio);
+      this.renderer.setSize(this.canvasWidth, this.canvasHeight);
 
       this.camera.aspect = this.canvasWidth / this.canvasHeight;
       this.camera.updateProjectionMatrix();
@@ -73,17 +78,30 @@ export default {
   },
   head: {
     meta: [
-      { name: "viewport", content: "width=device-width,initial-scale=1.0" },
+      { name: "viewport", content: "width=device-width,initial-scale=1.0" }
       // ...
     ]
   }
 };
 </script>
 
-<style>
+<style scoped>
+#wrap {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 80%;
+  text-align: left;
+  color: white;
+  max-width: 100px;
+  
+}
 canvas {
   margin: 0;
   overflow: hidden;
   z-index: -1;
+}
+h1 {
+  z-index: 1;
 }
 </style>
