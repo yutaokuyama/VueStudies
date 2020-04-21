@@ -1,64 +1,67 @@
 <template>
-<div class = "work-card">
-<img :src="imgPath" alt="hoge"/>
-<div class="mask">
-		<div class="caption"><slot /></div>
-	</div>
-</div>
+  <div class="work-card">
+    <router-link class="nav" id="article" :to="convertedPagePath" exact>
+      <img :src="imgPath" alt="hoge" />
+      <div class="mask">
+        <div class="caption"><slot /></div>
+      </div>
+    </router-link>
+  </div>
 </template>
 
 <script>
 export default {
-  props:{
-    path:{
-      type:String,
-      default:''
+  props: {
+    imgPath: {
+      type: String,
+      default: "",
+    },
+    pagePath: {
+      type: String,
+      default: "",
     },
   },
-  methods:{
-    imgPath: function(){
-      console.log(require('@/assets/images/ET8zF7HVAAEWAlP.jpeg'));
-      return require(`${this.path}`);
+  computed: {
+    convertedPagePath: function() {
+      return "/"+this.pagePath;
     },
-    loadImg: function(){
-    return require(`${this.path}`);
   },
-  },
-}
+};
 </script>
 
-
 <style scoped>
-div{
+div {
   position: relative;
+ 
 }
 img {
   position: relative;
   width: 100%;
+  vertical-align: bottom;
 }
-h1:hover{
-      opacity: 10;
+h1:hover {
+  opacity: 10;
 }
 .mask {
-	width:			100%;
-	height:			100%;
-	position:		absolute;	/* 絶対位置指定 */
-	top:			0;
-	left:			0;
-	opacity:		0;	/* マスクを表示しない */
-	background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
-	-webkit-transition:	all 0.2s ease;
-	transition:		all 0.2s ease;
+  width: 100%;
+  height: 100%;
+  position: absolute; /* 絶対位置指定 */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .work-card .caption {
-	font-size:		130%;
+  font-size: 130%;
   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    color:			#fff;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: #fff;
 }
 .work-card:hover .mask {
-	opacity:		1;	/* マスクを表示する */
+  opacity: 1; /* マスクを表示する */
 }
 </style>

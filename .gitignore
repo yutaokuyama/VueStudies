@@ -10,4 +10,11 @@ docs/_book
 # TODO: where does this rule come from?
 test/
 
-
+*.png
+*.jpg
+*.jpeg
+*.JPEG
+*.mp4
+*.PNG
+*.MOV
+*.gif

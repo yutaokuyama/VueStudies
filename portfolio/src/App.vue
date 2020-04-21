@@ -15,8 +15,8 @@ export default {
 
 <style>
 #app {
-
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+  font-family:  Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -24,8 +24,10 @@ export default {
   margin-top: 0px;
   overflow: hidden;
 
+
 }
 body{
   margin: 0;
+  padding:0;
 }
 </style>
