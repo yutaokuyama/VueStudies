@@ -10,7 +10,7 @@ import Inofes2019 from "./components/Articles/Inofes2019";
 import Kbc2018 from "./components/Articles/Kbc2018";
 import Tukiatari from "./components/Articles/Tukiatari";
 import Sohosai2019 from "./components/Articles/Sohosai2019";
-
+import Hanayashiki from "./components/Articles/Hanayashiki";
 
 Vue.use(Router);
 
@@ -71,6 +71,11 @@ export default new Router({
       path: "/Sohosai2019",
       name: "Sohosai2019",
       component: Sohosai2019
+    },
+    {
+      path: "/Hanayashiki",
+      name: "Hanayashiki",
+      component: Hanayashiki
     },
   ],
   scrollBehavior (to, from, savedPosition) {

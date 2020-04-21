@@ -13,7 +13,6 @@
     <img class="galally" src="/images/MAD/instancing.png">
     <img class="galally" src="/images/MAD/wave.png">
     </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/UuLEwCW4aO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </template>
 <style scoped>

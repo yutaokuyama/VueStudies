@@ -30,14 +30,21 @@ export default {
 </script>
 
 <style scoped>
-div {
+.work-card {
   position: relative;
- 
+  overflow: hidden;
 }
 img {
   position: relative;
   width: 100%;
   vertical-align: bottom;
+  transform: scale(1.0);
+  transition-duration: 0.2s;
+}
+.work-card:hover img{
+	/*画像の拡大率*/
+  transform: scale(1.02);
+	transition-duration: 0.4s;	/*変化に掛かる時間*/
 }
 h1:hover {
   opacity: 10;

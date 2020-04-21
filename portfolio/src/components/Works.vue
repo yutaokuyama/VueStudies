@@ -19,6 +19,9 @@
       <ItemCard imgPath="/images/inofes2019/paspied.png" pagePath="Inofes2019"
         >J-WAVE INNOVATION WORLD FESTA 2019 パスピエ VJ</ItemCard
       >
+      <ItemCard imgPath="/images/Hanayashiki/Asset 1.png" pagePath="Hanayashiki"
+        >梅屋敷盆踊り大会</ItemCard
+      >
       <ItemCard imgPath="/images/MAD/flyer.png" pagePath="Mad"
         >MAD</ItemCard
       >
@@ -47,6 +50,7 @@ export default {
 .grid {
   display: grid;
   grid-gap: 0px 0px;
+  background: black;
 }
 @media screen and (min-width: 480px) {
   .grid {
